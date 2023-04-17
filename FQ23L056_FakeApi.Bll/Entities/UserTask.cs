@@ -8,7 +8,7 @@ namespace FQ23L056_FakeApi.Bll.Entities
 {
     public class UserTask
     {
-        public int Id { get; init; }
+        public int Id { get; internal set; }
         public string Title { get; set; }
         public bool Done { get; set; }
 

@@ -36,8 +36,8 @@ namespace FQ23L056_FakeApi.Bll.Services
 
         public bool Update(int id, UserTask entity)
         {
-            UserTask userTask = new UserTask(id, entity.Title, entity.Done);
-            return _taskRepository.Update(userTask.ToDal());
+            entity.Id = id;
+            return _taskRepository.Update(entity.ToDal());
         }
 
         public bool Delete(int id)
